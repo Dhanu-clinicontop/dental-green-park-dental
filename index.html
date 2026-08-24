@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Park Dental — Premium Dental Care in Delhi | 4.9★ Rated</title>
+<meta name="description" content="Green Park Dental, Delhi — rated 4.9★ by 2,900+ patients. Painless root canals, implants, braces & smile makeovers. Book instantly on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c1b24;
+    --ink-soft:#3d5260;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --line:#e5e2da;
+    --brand:#0e7490;
+    --brand-deep:#155e75;
+    --brand-tint:#ecf8fa;
+    --accent:#d9a441;
+    --ok:#15803d;
+    --radius:14px;
+    --shadow-sm:0 1px 2px rgba(12,27,36,.06);
+    --shadow-md:0 6px 24px -8px rgba(12,27,36,.14);
+    font-size:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;letter-spacing:-.01em}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+  .wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+
+  /* ---------- header ---------- */
+  .topbar{background:var(--ink);color:#e8eef2;font-size:.82rem;padding-block:.45rem}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:1rem}
+  .topbar a:hover{text-decoration:underline}
+  .topbar .hours{color:#9db4bf}
+  @media(max-width:560px){.topbar .hours{display:none}}
+
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,250,247,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s, box-shadow .25s;
+  }
+  header.site.scrolled{border-color:var(--line);box-shadow:var(--shadow-sm)}
+  .nav{display:flex;align-items:center;gap:2rem;padding-block:.85rem}
+  .logo{display:flex;align-items:center;gap:.65rem;font-family:'Fraunces',serif;font-size:1.18rem;font-weight:600;color:var(--ink)}
+  .logo svg{width:38px;height:38px}
+  .nav-links{display:flex;gap:1.6rem;margin-left:auto;font-size:.93rem;font-weight:500;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--brand)}
+  @media(max-width:820px){.nav-links{display:none}}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    padding:.72rem 1.35rem;border-radius:999px;
+    font-weight:600;font-size:.95rem;line-height:1;
+    border:1.5px solid transparent;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+  .btn-primary:hover{background:var(--brand-deep);box-shadow:var(--shadow-md)}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  .btn-wa{background:#128c4b;color:#fff}
+  .btn-wa:hover{background:#0e7440}
+  .btn-lg{padding:.95rem 1.8rem;font-size:1.02rem}
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:clamp(3rem,7vw,5.5rem) clamp(2.5rem,5vw,4rem)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--brand-tint);color:var(--brand-deep);
+    font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    padding:.4rem .9rem;border-radius:999px;margin-bottom:1.25rem;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1.1rem}
+  .hero h1 em{font-style:italic;color:var(--brand)}
+  .hero p.lede{font-size:1.08rem;color:var(--ink-soft);max-width:34rem;margin-bottom:1.6rem}
+  .rating-row{display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem;flex-wrap:wrap}
+  .stars{color:var(--accent);letter-spacing:.1em;font-size:1.05rem}
+  .rating-row strong{font-size:.95rem}
+  .rating-row span.muted{color:var(--ink-soft);font-size:.9rem}
+  .cta-row{display:flex;gap:.8rem;flex-wrap:wrap}
+
+  /* hero card */
+  .hero-card{
+    background:linear-gradient(160deg,var(--brand-deep),#0b3b4a 70%);
+    border-radius:22px;color:#eaf6f9;
+    padding:2rem;position:relative;overflow:hidden;
+    box-shadow:var(--shadow-md);
+  }
+  .hero-card::after{
+    content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(217,164,65,.28),transparent 70%);
+    top:-90px;right:-90px;
+  }
+  .hc-title{font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:1.2rem;color:#fff}
+  .hc-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.4rem;position:relative;z-index:1}
+  .hc-stat b{display:block;font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:#fff}
+  .hc-stat span{font-size:.78rem;color:#a8ccd6;letter-spacing:.03em}
+  .hc-note{
+    margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.16);
+    font-size:.83rem;color:#bcd9e1;display:flex;gap:.55rem;align-items:flex-start;
+  }
+  .hc-note svg{flex:none;margin-top:.15rem}
+
+  /* ---------- marquee trust strip ---------- */
+  .strip{background:var(--ink);color:#dbe7ec;padding-block:.8rem;font-size:.86rem;overflow:hidden}
+  .strip-inner{display:flex;gap:3rem;white-space:nowrap;animation:slide 28s linear infinite;width:max-content}
+  .strip span b{color:#fff}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section{padding-block:clamp(3.2rem,7vw,5.5rem)}
+  .sec-head{max-width:38rem;margin-bottom:clamp(2rem,4vw,3rem)}
+  .sec-head .kicker{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:.6rem}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:.7rem}
+  .sec-head p{color:var(--ink-soft)}
+
+  /* services — asymmetric list */
+  .svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media(max-width:980px){.svc-list{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.svc-list{grid-template-columns:1fr}}
+  .svc{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.5rem;display:flex;flex-direction:column;gap:.55rem;
+    transition:border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .svc:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .svc.feature{grid-column:span 2;background:var(--brand-tint);border-color:#cde9ef}
+  @media(max-width:620px){.svc.feature{grid-column:span 1}}
+  .svc .ico{
+    width:44px;height:44px;border-radius:11px;background:#fff;
+    border:1px solid var(--line);display:grid;place-items:center;margin-bottom:.4rem;
+  }
+  .svc .ico svg{width:23px;height:23px;stroke:var(--brand)}
+  .svc h3{font-size:1.14rem}
+  .svc p{font-size:.92rem;color:var(--ink-soft)}
+  .svc .price-hint{font-size:.8rem;font-weight:600;color:var(--brand-deep);margin-top:auto;padding-top:.4rem}
+
+  /* why / process */
+  .why{background:#f3f1ea;border-block:1px solid var(--line)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+  @media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.why-grid{grid-template-columns:1fr}}
+  .step{position:relative;padding-top:2.6rem}
+  .step .num{
+    position:absolute;top:0;left:0;width:2.1rem;height:2.1rem;border-radius:50%;
+    background:var(--ink);color:#fff;font-family:'Fraunces',serif;
+    display:grid;place-items:center;font-size:.95rem;
+  }
+  .step h3{font-size:1.05rem;margin-bottom:.4rem}
+  .step p{font-size:.9rem;color:var(--ink-soft)}
+
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+  @media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+  .rev-score{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:2rem;text-align:center;box-shadow:var(--shadow-sm);
+  }
+  .rev-score .big{font-family:'Fraunces',serif;font-size:3.4rem;font-weight:600;color:var(--ink)}
+  .rev-score .stars{font-size:1.3rem;margin-block:.3rem .5rem}
+  .rev-score p{font-size:.88rem;color:var(--ink-soft)}
+  .bars{margin-top:1.4rem;display:grid;gap:.55rem;text-align:left}
+  .bar-row{display:grid;grid-template-columns:2.4rem 1fr 2.6rem;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft)}
+  .bar{height:8px;background:#eee9df;border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+  .rev-points li{
+    display:flex;gap:.8rem;align-items:flex-start;
+    padding-block:.95rem;border-bottom:1px dashed var(--line);
+    font-size:.96rem;color:var(--ink-soft);
+  }
+  .rev-points li:last-child{border:none}
+  .rev-points svg{flex:none;margin-top:.2rem}
+  .rev-points b{color:var(--ink);font-weight:600}
+
+  /* booking */
+  .book{background:var(--ink);color:#e8eff3}
+  .book .kicker{color:#7fc4d8}
+  .book h2{color:#fff}
+  .book .sec-head p{color:#a9bec8}
+  .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+  @media(max-width:860px){.book-grid{grid-template-columns:1fr}}
+  .field{margin-bottom:1.05rem}
+  .field label{display:block;font-size:.84rem;font-weight:600;margin-bottom:.35rem;color:#cfe2e9}
+  .field input,.field select,.field textarea{
+    width:100%;padding:.78rem 1rem;border-radius:10px;font-size:.95rem;font-family:inherit;
+    border:1px solid #2b4552;background:#12242e;color:#fff;
+  }
+  .field input::placeholder,.field textarea::placeholder{color:#5f7a87}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237fc4d8' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+  .book-side{display:flex;flex-direction:column;gap:1rem}
+  .info-card{
+    background:#12242e;border:1px solid #24404e;border-radius:var(--radius);
+    padding:1.3rem 1.4rem;display:flex;gap:.9rem;align-items:flex-start;
+  }
+  .info-card svg{flex:none;margin-top:.15rem;stroke:#7fc4d8}
+  .info-card b{display:block;color:#fff;font-size:.95rem;margin-bottom:.15rem}
+  .info-card span{font-size:.88rem;color:#a9bec8}
+  .info-card a{color:#7fc4d8;font-weight:600}
+  .map-box{border-radius:var(--radius);overflow:hidden;border:1px solid #24404e;margin-top:.4rem}
+  .map-box iframe{width:100%;height:210px;border:0;display:block;filter:grayscale(.2)}
+
+  /* faq */
+  .faq{background:#f3f1ea;border-block:1px solid var(--line)}
+  .faq-wrap{max-width:46rem;margin-inline:auto}
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin-bottom:.7rem;overflow:hidden;
+  }
+  details[open]{border-color:var(--brand)}
+  summary{
+    cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:1.05rem 1.3rem;font-weight:600;font-size:.98rem;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary .chev{transition:transform .25s;flex:none}
+  details[open] summary .chev{transform:rotate(180deg)}
+  details .ans{padding:0 1.3rem 1.15rem;font-size:.93rem;color:var(--ink-soft)}
+
+  /* final cta */
+  .final{text-align:center}
+  .final h2{font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:30ch;margin-inline:auto;margin-bottom:.8rem}
+  .final p{color:var(--ink-soft);max-width:34rem;margin:0 auto 1.8rem}
+
+  footer.site-foot{background:#08141b;color:#8fa5b0;font-size:.86rem;padding-block:2.4rem}
+  .foot-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+  footer a:hover{color:#fff}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .strip-inner{animation:none}
+  }
+
+  /* mobile menu */
+  .menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);border-radius:9px;padding:.45rem .6rem;cursor:pointer}
+  @media(max-width:820px){
+    .menu-btn{display:block}
+    .nav .btn-primary{display:none}
+    .mobile-nav{
+      display:none;flex-direction:column;gap:.2rem;
+      padding-block:.6rem 1rem;border-top:1px solid var(--line);
+    }
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{padding:.65rem .2rem;font-weight:500;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+    .mobile-nav a:last-child{border:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="tel:+91930899170">📞 Call: +91 93089 9170</a>
+    <span class="hours">Mon–Sat · 10 AM – 8 PM · Green Park, New Delhi</span>
+  </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Green Park Dental home">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="#0e7490"/>
+        <path d="M13 12c2.5-1.6 4.8-.6 7 .5 2.2-1.1 4.5-2.1 7-.5 2.6 1.7 1.8 5.6.6 8.9-1 2.7-1.7 7.6-3.6 7.6-1.6 0-1.4-3.6-2.4-6.1-.5-1.3-1-2-1.6-2s-1.1.7-1.6 2c-1 2.5-.8 6.1-2.4 6.1-1.9 0-2.6-4.9-3.6-7.6-1.2-3.3-2-7.2.6-8.9z" fill="#fff"/>
+      </svg>
+      Green Park Dental
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Treatments</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book Visit</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 1h18M1 7h18M1 13h18" stroke="#0c1b24" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="wrap">
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#services">Treatments</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQs</a>
+      <a href="#book"><b style="color:var(--brand)">Book a Visit →</b></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Accepting new patients</span>
+        <h1 id="heroTitle">Dentistry that makes you want to <em>smile about it.</em></h1>
+        <p class="lede">From painless root canals to complete smile makeovers — Green Park Dental combines 15+ years of experience with gentle, modern care trusted across South Delhi.</p>
+        <div class="rating-row">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4.9 / 5</strong>
+          <span class="muted">· 2,900+ Google reviews</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-wa btn-lg" id="waHero" href="#" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.8 1.7.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.6z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="tel:+91930899170">Call the Clinic</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Clinic highlights">
+        <p class="hc-title">Trusted by South Delhi since 2010</p>
+        <div class="hc-stats">
+          <div class="hc-stat"><b>15+</b><span>YEARS OF PRACTICE</span></div>
+          <div class="hc-stat"><b>2,900+</b><span>GOOGLE REVIEWS</span></div>
+          <div class="hc-stat"><b>4.9★</b><span>PATIENT RATING</span></div>
+          <div class="hc-stat"><b>20+</b><span>TREATMENTS OFFERED</span></div>
+        </div>
+        <p class="hc-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7fc4d8" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.3l-4.8 2.6.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+          Same-day appointments available. Emergency toothache? Message us now.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-inner">
+      <span>✦ <b>Painless treatments</b> guaranteed comfort</span>
+      <span>✦ <b>Digital X-ray</b> in-house, low radiation</span>
+      <span>✦ <b>Sterilization protocol</b> international standards</span>
+      <span>✦ <b>Transparent pricing</b> — no hidden costs</span>
+      <span>✦ <b>All insurances accepted</b></span>
+      <span>✦ <b>Painless treatments</b> guaranteed comfort</span>
+      <span>✦ <b>Digital X-ray</b> in-house, low radiation</span>
+      <span>✦ <b>Sterilization protocol</b> international standards</span>
+      <span>✦ <b>Transparent pricing</b> — no hidden costs</span>
+      <span>✦ <b>All insurances accepted</b></span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" aria-labelledby="svcTitle">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Treatments</p>
+        <h2 id="svcTitle">Complete dental care under one roof</h2>
+        <p>Routine checkups to full-mouth rehabilitation — every treatment plan explained before we begin, with clear pricing upfront.</p>
+      </div>
+      <div class="svc-list">
+        <article class="svc feature reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-3 0-4-7-4-11 0-3 1.5-5 4-5s4 2 4 5c0 4-1 11-4 11z"/></svg></div>
+          <h3>Painless Root Canal (RCT)</h3>
+          <p>Single-visit rotary endodontics with apex locators — most patients feel nothing beyond the numbing gel. Save your natural tooth, skip the extraction.</p>
+          <span class="price-hint">Single sitting · From ₹3,500</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 8v8M20 8v8M7 12h4"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/></svg></div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacement using internationally certified implant systems.</p>
+          <span class="price-hint">From ₹18,000/tooth</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="6" rx="3"/><path d="M7 9v6M17 9v6"/></svg></div>
+          <h3>Braces &amp; Aligners</h3>
+          <p>Metal, ceramic or invisible clear aligners — straighten your smile discreetly at any age.</p>
+          <span class="price-hint">Plans from ₹15,000</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 3.5 3.8.5-2.8 2.7.7 3.8L12 11.8l-3.4 1.7.7-3.8L6.5 7l3.8-.5z"/><path d="M12 15v6M9 18h6"/></svg></div>
+          <h3>Smile Makeover &amp; Veneers</h3>
+          <p>Digital smile design with shade-matched ceramic veneers — see your result preview before treatment starts.</p>
+          <span class="price-hint">Consultation free</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Emergency Dental Care</h3>
+          <p>Severe toothache, broken tooth or swelling? Same-day slots reserved daily for emergencies.</p>
+          <span class="price-hint">Same-day slots daily</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c-1.5-1.5-4-1.8-5.5 0-1.6 2-1 5 .5 8 1.2 2.4 2 5 3 5s1-2 2-2 1 2 2 2 1.8-2.6 3-5c1.5-3 2.1-6 .5-8C16 3.2 13.5 3.5 12 5z"/></svg></div>
+          <h3>Kids Dentistry</h3>
+          <p>Gentle first visits, fluoride protection and cavity care that keeps little smiles fearless.</p>
+          <span class="price-hint">Child-friendly team</span>
+        </article>
+        <article class="svc reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 8c2-1.5 5-1.5 7 0 2-1.5 5-1.5 7 0M5 16c2-1.5 5-1.5 7 0 2-1.5 5-1.5 7 0"/></svg></div>
+          <h3>Cleaning &amp; Whitening</h3>
+          <p>Ultrasonic scaling plus in-clinic whitening — visibly brighter teeth in a single visit.</p>
+          <span class="price-hint">From ₹1,200</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why" id="why" aria-labelledby="whyTitle">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Why Green Park Dental</p>
+        <h2 id="whyTitle">Your first visit, step by step</h2>
+        <p>No surprises, no upselling. Here's exactly what happens after you book.</p>
+      </div>
+      <div class="why-grid">
+        <div class="step reveal"><span class="num">1</span><h3>Instant confirmation</h3><p>Message us on WhatsApp — you get a confirmed slot within minutes, not "we'll call you back."</p></div>
+        <div class="step reveal"><span class="num">2</span><h3>Digital diagnosis</h3><p>In-house digital X-ray and full examination. You see what we see, on screen.</p></div>
+        <div class="step reveal"><span class="num">3</span><h3>Clear plan &amp; pricing</h3><p>Written treatment plan with itemized costs. Nothing proceeds without your yes.</p></div>
+        <div class="step reveal"><span class="num">4</span><h3>Gentle treatment</h3><p>Pain-free techniques, sterilized instruments opened fresh in front of you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="revTitle">
+    <div class="wrap rev-grid">
+      <div class="reveal">
+        <div class="sec-head" style="margin-bottom:1.4rem">
+          <p class="kicker">Patient Reviews</p>
+          <h2 id="revTitle">Rated 4.9 by 2,900+ patients</h2>
+        </div>
+        <ul class="rev-points">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>"Zero pain"</b> is the phrase our patients use most in reviews.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>Honest advice</b> — extraction only when truly necessary; saving your tooth comes first.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>On-time appointments</b> — your slot is yours, waiting rooms are for other clinics.</span></li>
+        </ul>
+      </div>
+      <div class="rev-score reveal" aria-label="Rating breakdown">
+        <div class="big">4.9</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Based on <b>2,988 Google reviews</b> — among Delhi's highest-rated dental practices.</p>
+        <div class="bars" aria-hidden="true">
+          <div class="bar-row"><span>5★</span><div class="bar"><i style="width:94%"></i></div><span>94%</span></div>
+          <div class="bar-row"><span>4★</span><div class="bar"><i style="width:4%"></i></div><span>4%</span></div>
+          <div class="bar-row"><span>3★</span><div class="bar"><i style="width:1%"></i></div><span>1%</span></div>
+          <div class="bar-row"><span>2★</span><div class="bar"><i style="width:.6%"></i></div><span>&lt;1%</span></div>
+          <div class="bar-row"><span>1★</span><div class="bar"><i style="width:.4%"></i></div><span>&lt;1%</span></div>
+        </div>
+        <p style="margin-top:1.2rem;font-size:.8rem">Distribution approximate · Source: Google Business Profile</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="book" id="book" aria-labelledby="bookTitle">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Book an Appointment</p>
+        <h2 id="bookTitle">Reserve your slot in 30 seconds</h2>
+        <p>Fill this in — it opens WhatsApp with your details pre-filled. Just press send.</p>
+      </div>
+      <div class="book-grid">
+        <form id="bookForm" novalidate>
+          <div class="field">
+            <label for="fName">Your name *</label>
+            <input id="fName" name="name" type="text" required autocomplete="name" placeholder="e.g. Rahul Sharma">
+          </div>
+          <div class="field">
+            <label for="fTreat">Treatment needed</label>
+            <select id="fTreat" name="treatment">
+              <option>General checkup / consultation</option>
+              <option>Tooth pain / emergency</option>
+              <option>Root canal</option>
+              <option>Implant</option>
+              <option>Braces / aligners</option>
+              <option>Cleaning / whitening</option>
+              <option>Kids dentistry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fDay">Preferred day</label>
+            <select id="fDay" name="day">
+              <option>Today</option>
+              <option>Tomorrow</option>
+              <option>This weekend</option>
+              <option>Next week</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fTime">Preferred time</label>
+            <select id="fTime" name="time">
+              <option>Morning (10–1)</option>
+              <option>Afternoon (1–4)</option>
+              <option>Evening (4–8)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-wa btn-lg" style="width:100%">Send Booking Request on WhatsApp →</button>
+          <p style="font-size:.8rem;color:#7d97a3;margin-top:.7rem">No account needed. Your message goes straight to our front desk on WhatsApp.</p>
+        </form>
+
+        <div class="book-side">
+          <div class="info-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><b>Call directly</b><span><a href="tel:+91930899170">+91 93089 9170</a> · Mon–Sat 10 AM – 8 PM</span></div>
+          </div>
+          <div class="info-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b>Visit us</b><span>Green Park, New Delhi — easy parking, metro-accessible</span></div>
+          </div>
+          <div class="info-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><b>Safety first</b><span>Hospital-grade sterilization, single-use kits opened before you</span></div>
+          </div>
+          <div class="map-box">
+            <iframe title="Green Park Dental location map" loading="lazy" src="https://maps.google.com/maps?q=Green%20Park%20Dental%20New%20Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap faq-wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">FAQs</p>
+        <h2 id="faqTitle">Questions patients ask us</h2>
+      </div>
+      <details class="reveal" open>
+        <summary>Does a root canal hurt? <svg class="chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+        <p class="ans">Modern RCT with proper anesthesia is largely painless — most patients compare it to getting a filling. We use rotary instruments that finish many cases in a single visit, so less time in the chair too.</p>
+      </details>
+      <details class="reveal">
+        <summary>How much will my treatment cost? <svg class="chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+        <p class="ans">You get a written, itemized plan before anything begins. Consultation covers diagnosis and the quote — there are never surprise add-ons mid-treatment.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I get a same-day appointment for tooth pain? <svg class="chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+        <p class="ans">Yes — we reserve same-day emergency slots every day. Message us on WhatsApp or call and mention "emergency" for the earliest slot.</p>
+      </details>
+      <details class="reveal">
+        <summary>Do you accept insurance? <svg class="chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+        <p class="ans">We support reimbursement documentation for major insurers and can structure cashless options for eligible corporate plans — ask at reception with your policy details.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap reveal">
+      <h2>Your smile deserves a 4.9★ team.</h2>
+      <p>Join 2,900+ patients who stopped dreading the dentist. First consultation includes full examination and honest advice.</p>
+      <a class="btn btn-wa btn-lg" href="#book">Book Your Visit Now</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <b style="color:#fff;font-family:'Fraunces',serif;font-size:1rem">Green Park Dental</b><br>
+      Premium dental care in South Delhi · Since 2010
+    </div>
+    <div>
+      <a href="tel:+91930899170">+91 93089 9170</a><br>
+      Mon–Sat · 10 AM – 8 PM
+    </div>
+    <div style="opacity:.65">
+      © 2026 Green Park Dental<br>All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // WhatsApp number (clinic front desk)
+  var WA = '91930899170';
+
+  // Hero quick link
+  document.getElementById('waHero').href =
+    'https://wa.me/' + WA + '?text=' + encodeURIComponent(
+      'Hi Green Park Dental! I would like to book a dental appointment.');
+
+  // Header shadow on scroll
+  var header = document.getElementById('siteHeader');
+  addEventListener('scroll', function(){ header.classList.toggle('scrolled', scrollY > 8); }, {passive:true});
+
+  // Mobile menu
+  var btn = document.getElementById('menuBtn'), nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  });
+
+  // Booking form -> WhatsApp compose
+  document.getElementById('bookForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var name = v('fName');
+    if(!name){
+      document.getElementById('fName').focus();
+      document.getElementById('fName').style.borderColor = '#e05656';
+      setTimeout(function(){ document.getElementById('fName').style.borderColor=''; }, 1800);
+      return;
+    }
+    var msg =
+      'Hi Green Park Dental! 👋\n\n' +
+      'I would like to book an appointment.\n' +
+      '• Name: ' + name + '\n' +
+      '• Treatment: ' + v('fTreat') + '\n' +
+      '• Preferred day: ' + v('fDay') + '\n' +
+      '• Preferred time: ' + v('fTime') + '\n\n' +
+      'Please confirm my slot. Thank you!';
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+
+  // Scroll reveal
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
